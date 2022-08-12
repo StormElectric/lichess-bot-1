@@ -1,4 +1,4 @@
-token: "xxxxxxxxxxxxxxxx"    # Lichess OAuth2 Token.
+token: "lip_jD4a1uFGdgfPv3TK6aZr"    # Lichess OAuth2 Token.
 url: "https://lichess.org/"  # Lichess base URL.
 
 engine:                      # Engine settings.
@@ -98,10 +98,10 @@ challenge:                   # Incoming challenges.
   min_base: 0                # Minimum amount of base time to accept a challenge.
   variants:                  # Chess variants to accept (https://lichess.org/variant).
     - standard
-    - fromPosition
+#   - fromPosition
 #   - antichess
 #   - atomic
-    - chess960
+#   - chess960
 #   - crazyhouse
 #   - horde
 #   - kingOfTheHill
@@ -122,13 +122,13 @@ greeting:
     #   {opponent} to insert opponent's name
     #   {me} to insert bot's name
     # Any other words in curly braces will be removed.
-    hello: "Hi! I'm {me}. Good luck! Type !help for a list of commands I can respond to." # Message to send to chat at the start of a game
-    goodbye: "Good game!" # Message to send to chat at the end of a game
+    hello: "Hello {opponent}, I'm {me}, I am programmed in python, type !help for a list of information of my engine and computer. " # Message to send to chat at the start of a game
+    goodbye: "Good game! I hope we will challenge each other once again! Bye!" # Message to send to chat at the end of a game
 
 # pgn_directory: "game_records" # A directory where PGN-format records of the bot's games are kept
 
 matchmaking:
-  allow_matchmaking: false    # Set it to 'true' to challenge other bots.
+  allow_matchmaking: true    # Set it to 'true' to challenge other bots.
   challenge_variant: "random" # If set to 'random', the bot will choose one variant from the variants enabled in 'challenge.variants'.
   challenge_timeout: 30       # Create a challenge after being idle for 'challenge_timeout' minutes.
   challenge_initial_time: 60  # Initial time in seconds of the challenge.
@@ -136,4 +136,4 @@ matchmaking:
 # challenge_days: 2           # Days for correspondence challenge. If this option is enabled, a correspondence challenge will be created even if 'challenge_initial_time' is enabled.
   opponent_min_rating: 600    # Opponents rating should be above this value (600 is the minimum rating in lichess).
   opponent_max_rating: 4000   # Opponents rating should be below this value (4000 is the maximum rating in lichess).
-  challenge_mode: "random"    # Set it to the mode in which challenges are sent. Possible options are 'casual', 'rated' and 'random'.
+  challenge_mode: "rated"    # Set it to the mode in which challenges are sent. Possible options are 'casual', 'rated' and 'random'.
